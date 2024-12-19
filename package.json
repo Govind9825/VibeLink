@@ -3,20 +3,45 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "both": "concurrently \"nodemon ./db.js\" \"npm run dev\"",
+    "dev": "next dev ",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/noto-color-emoji": "^5.1.0",
+    "aceternity-ui": "^0.2.2",
+    "axios": "^1.7.6",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "emoji-picker-react": "^4.11.1",
+    "express": "^4.21.2",
+    "framer-motion": "^11.5.4",
+    "fs": "^0.0.1-security",
+    "lucide-react": "^0.441.0",
+    "mini-svg-data-uri": "^1.4.4",
+    "mongoose": "^8.9.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.11.0",
+    "next": "^14.2.7",
+    "next-auth": "^4.24.7",
+    "next-connect": "^1.0.0",
+    "nodemon": "^3.1.9",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.6"
+    "socket": "^0.14.35",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.7.5",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "concurrently": "^8.2.2",
     "eslint": "^8",
-    "eslint-config-next": "14.2.6"
+    "eslint-config-next": "14.2.6",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
   }
 }

@@ -1,7 +1,7 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+import Head from "next/head";
+
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +11,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Colr+Emoji+Glyf"
+          rel="stylesheet"
+        />
+        <script src="/socket.io/socket.io.js"></script>
+        <script>const socket = io();</script>
+      </Head>
+      <body>{children}</body>
     </html>
   );
 }
